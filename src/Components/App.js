@@ -1,12 +1,15 @@
 import React from "react";
 import "../App.css";
 import TodoForm from "./TodoForm.js";
+import Adding from "./Adding";
 
 function App() {
   return (
-    <div className="todo-app">
+    <div className="App">
       <h1>Todo App</h1>
       <TodoForm />
+      <h2>Todos:</h2>
+      <Adding />
     </div>
   );
 }
