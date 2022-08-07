@@ -1,1 +1,28 @@
+* {
+  margin: 2px;
+  padding: 2px;
+  color: wheat;
+  text-align: center;
+  background-color: rgb(36, 36, 72);
+}
+h1 {
+  color: whitesmoke;
+  text-align: center;
+  margin: 30px 0;
+}
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  margin: 30px 0;
+}
 
+form {
+  background-color: whitesmoke;
+  margin: 150px;
+  padding: 20px;
+  border-radius: 2rem;
+}
+
+button {
+  background-color: rgb(230, 19, 212);
+}

@@ -1,26 +1,36 @@
 import React, { useState } from "react";
+import { nanoid } from "nanoid";
 
 function TodoForm() {
   const [inputValue, setInputValue] = useState("");
+  const [todos, setTodos] = useState([]);
+
   return (
-    <form
-      className="todo-form"
-      onSubmit={(event) => {
-        event.preventDefault();
-        console.log(event.target.value);
-      }}
-    >
-      <input
-        value={inputValue}
-        type="text"
-        placeholder="Add a todo"
-        name="text"
-        className="todo-input"
-      />
-      <button type="submit" className="todo-button">
-        Add todo
-      </button>
-    </form>
+    <>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          setTodos([...todos, { name: inputValue, id: nanoid() }]);
+          setInputValue("");
+        }}
+      >
+        <input
+          required
+          type="text"
+          value={inputValue}
+          onChange={(event) => {
+            setInputValue(event.target.value);
+          }}
+        />
+        <button type="submit">add</button>
+      </form>
+      <ul>
+        {todos.map((todo) => {
+          return <li key={todo.id}>{todo.name}</li>;
+        })}
+      </ul>
+    </>
   );
 }
+
 export default TodoForm;
