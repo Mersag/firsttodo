@@ -13,7 +13,7 @@ h1 {
 h2 {
   color: whitesmoke;
   text-align: center;
-  margin: 30px 0;
+  margin: 3px 0;
 }
 
 form {
@@ -25,4 +25,6 @@ form {
 
 button {
   background-color: rgb(230, 19, 212);
+  margin: 10px;
+  padding: 10px;
 }
